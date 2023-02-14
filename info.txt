@@ -1,0 +1,12 @@
+A] atributul de "pattern" poate fi folosit in inputuri de tip: text, password, email, telefon, search, url
+
+<input 
+    type="password"
+    pattern="[a-zA-Z0-9]+"
+/>
+
+    -> acest input accepta litere de la a la z, de la A la Z, de la 0 la 9, inputul pentru parola accept orice lungime fiindca apare acel +
+
+pattern="[a-zA-Z0-9]{8,}" -> acesta parola trebuie sa aiba minim 8 caractere !!
+
+B] atributul de title poate fi folosit ca si tool teep
