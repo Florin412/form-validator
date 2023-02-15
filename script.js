@@ -1,4 +1,3 @@
-// Select all elements you need
 const form = document.querySelector("#form")
 const passwordInput = document.querySelector("#password")
 const passwordConfirmationInput = document.querySelector(
@@ -7,22 +6,17 @@ const passwordConfirmationInput = document.querySelector(
 const parent = document.querySelector("#confirmation-pass-error")
 
 form.addEventListener("submit", (e) => {
-  // Create an array for errors message
   let errorsMessage = []
-  // Clear the last errors
   clearErrors(errorsMessage)
 
-  // if those 2 password dont match, return a error
   if (passwordConfirmationInput.value !== passwordInput.value) {
     errorsMessage.push(
       "Confirmation password doesn't match the initial password"
     )
   }
 
-  // daca exista erori, previn-o sa se dea submit la form
   if (errorsMessage.length > 0) {
     e.preventDefault()
-    // Daca exista erori, arata-le
     showErrors(errorsMessage)
   }
 })
